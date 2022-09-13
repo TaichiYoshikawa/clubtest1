@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict"
+
+        const number = Math.floor(Math.random() * 100)
+        const answer = parseInt(window.prompt("数当てゲーム。0~99の数字を半角で入力してね。"))
+        let message
+        if (answer === number) {
+            message = "あたり！ 答えは" + number + "でした"
+        } else if (answer < 0 || answer >= 100) {
+            message = "0~99の数字を入力してね！(半角で入力してね！）"
+        } else if (Math.abs(answer - number) === 1) {
+            message = "惜しい！！！答えは" + number + "でした"
+        } else if (answer < number) {
+            message = "残念！もっと大きい！答えは" + number + "でした"
+        } else if (answer > number) {
+            message = "残念！もっと小さい！答えは" + number + "でした"
+        } else {
+            message = "0~99の数字を入力してね！(半角で入力してね！）"
+        }
+
+        
+
+        window.alert(message)
+    </script>
+
+
+</body>
+
+</html>
